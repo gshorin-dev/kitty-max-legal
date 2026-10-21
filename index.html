@@ -9,7 +9,7 @@ body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 ui-ro
 main { max-width: 680px; margin: 0 auto; padding: 32px 16px 64px; }
 header { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
 header a { color: var(--ink); text-decoration: none; font-weight: 800; font-size: 20px; }
-nav { margin-left: auto; display: flex; gap: 16px; font-weight: 700; }
+nav { margin-left: auto; display: flex; gap: 16px; font-weight: 700; flex-wrap: wrap; }
 nav a { color: var(--accent); text-decoration: none; }
 h1 { font-size: 32px; line-height: 1.2; margin: 0 0 8px; }
 h2 { font-size: 20px; margin: 28px 0 6px; }
@@ -18,13 +18,21 @@ p, li { color: var(--ink); }
 .card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 20px; margin: 16px 0; }
 a { color: var(--accent); }
 footer { margin-top: 48px; color: var(--soft); font-size: 14px; }
+input[type=search] { width: 100%; font: inherit; padding: 12px 14px; border-radius: 14px; border: 2px solid var(--line); background: var(--card); color: var(--ink); }
+.cats { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 4px; padding: 0; list-style: none; }
+.cats a { display: inline-block; padding: 6px 12px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); text-decoration: none; font-weight: 700; font-size: 15px; }
+details { background: var(--card); border: 1px solid var(--line); border-radius: 16px; margin: 8px 0; }
+summary { cursor: pointer; padding: 14px 16px; font-weight: 800; list-style: none; }
+summary::-webkit-details-marker { display: none; }
+details > div { padding: 0 16px 14px; }
+.empty { color: var(--soft); }
 </style></head>
 <body><main>
-<header><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><path d="M8 34c0-10 5-16 12-16s12 6 12 16z" fill="#F2994A"/><path d="M10 20l3-11 7 7zM30 20l-3-11-7 7z" fill="#F2994A"/><circle cx="20" cy="22" r="10" fill="#F2994A"/><circle cx="16" cy="22" r="1.8" fill="#33302E"/><circle cx="24" cy="22" r="1.8" fill="#33302E"/><path d="M18.5 25.5q1.5 1.2 3 0" stroke="#33302E" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg><a href="">Kitty Max</a><nav><a href="privacy/">Privacy</a><a href="support/">Support</a></nav></header>
+<header><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><path d="M8 34c0-10 5-16 12-16s12 6 12 16z" fill="#F2994A"/><path d="M10 20l3-11 7 7zM30 20l-3-11-7 7z" fill="#F2994A"/><circle cx="20" cy="22" r="10" fill="#F2994A"/><circle cx="16" cy="22" r="1.8" fill="#33302E"/><circle cx="24" cy="22" r="1.8" fill="#33302E"/><path d="M18.5 25.5q1.5 1.2 3 0" stroke="#33302E" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg><a href="">Kitty Max</a><nav><a href="help/">Help</a><a href="support/">Support</a><a href="privacy/">Privacy</a></nav></header>
 
 <h1>A cat who grows as you take care of yourself</h1>
 <p>Research-backed protocols for sleep, light, movement and calm, ticked by Apple Health, with a kawaii kitten who cheers every small step. Your journal, moods and Health data stay on your phone.</p>
-<p><a href="privacy/">Privacy policy</a> · <a href="support/">Support</a></p>
+<p><a href="help/">Help</a> · <a href="support/">Support</a> · <a href="privacy/">Privacy policy</a></p>
 
 <footer>Kitty Max offers wellness habits, not medical advice.</footer>
 </main></body></html>

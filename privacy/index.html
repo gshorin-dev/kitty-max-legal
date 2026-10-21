@@ -9,7 +9,7 @@ body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 ui-ro
 main { max-width: 680px; margin: 0 auto; padding: 32px 16px 64px; }
 header { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
 header a { color: var(--ink); text-decoration: none; font-weight: 800; font-size: 20px; }
-nav { margin-left: auto; display: flex; gap: 16px; font-weight: 700; }
+nav { margin-left: auto; display: flex; gap: 16px; font-weight: 700; flex-wrap: wrap; }
 nav a { color: var(--accent); text-decoration: none; }
 h1 { font-size: 32px; line-height: 1.2; margin: 0 0 8px; }
 h2 { font-size: 20px; margin: 28px 0 6px; }
@@ -18,9 +18,17 @@ p, li { color: var(--ink); }
 .card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 20px; margin: 16px 0; }
 a { color: var(--accent); }
 footer { margin-top: 48px; color: var(--soft); font-size: 14px; }
+input[type=search] { width: 100%; font: inherit; padding: 12px 14px; border-radius: 14px; border: 2px solid var(--line); background: var(--card); color: var(--ink); }
+.cats { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 4px; padding: 0; list-style: none; }
+.cats a { display: inline-block; padding: 6px 12px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); text-decoration: none; font-weight: 700; font-size: 15px; }
+details { background: var(--card); border: 1px solid var(--line); border-radius: 16px; margin: 8px 0; }
+summary { cursor: pointer; padding: 14px 16px; font-weight: 800; list-style: none; }
+summary::-webkit-details-marker { display: none; }
+details > div { padding: 0 16px 14px; }
+.empty { color: var(--soft); }
 </style></head>
 <body><main>
-<header><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><path d="M8 34c0-10 5-16 12-16s12 6 12 16z" fill="#F2994A"/><path d="M10 20l3-11 7 7zM30 20l-3-11-7 7z" fill="#F2994A"/><circle cx="20" cy="22" r="10" fill="#F2994A"/><circle cx="16" cy="22" r="1.8" fill="#33302E"/><circle cx="24" cy="22" r="1.8" fill="#33302E"/><path d="M18.5 25.5q1.5 1.2 3 0" stroke="#33302E" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg><a href="../">Kitty Max</a><nav><a href="../privacy/">Privacy</a><a href="../support/">Support</a></nav></header>
+<header><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><path d="M8 34c0-10 5-16 12-16s12 6 12 16z" fill="#F2994A"/><path d="M10 20l3-11 7 7zM30 20l-3-11-7 7z" fill="#F2994A"/><circle cx="20" cy="22" r="10" fill="#F2994A"/><circle cx="16" cy="22" r="1.8" fill="#33302E"/><circle cx="24" cy="22" r="1.8" fill="#33302E"/><path d="M18.5 25.5q1.5 1.2 3 0" stroke="#33302E" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg><a href="../">Kitty Max</a><nav><a href="../help/">Help</a><a href="../support/">Support</a><a href="../privacy/">Privacy</a></nav></header>
 <h1>Kitty Max privacy policy</h1>
 <p class="note">Effective 2026-10-16</p>
 <h2>Your data stays yours</h2>
@@ -32,18 +40,20 @@ footer { margin-top: 48px; color: var(--soft); font-size: 14px; }
 <h2>Weather</h2>
 <p>If you let your cat see the weather, Kitty Max uses your approximate location only to ask Apple Weather what it&#x27;s like outside. The location isn&#x27;t stored, synced or sent anywhere else, and the app works the same without it.</p>
 <h2>Apple Health</h2>
-<p>If you connect Apple Health, Kitty Max reads sleep (including when you fell asleep and woke, and sleep stages), steps and walking distance, workouts, exercise and stand time, active energy, time in daylight, mindful minutes, heart rate variability, resting and walking heart rate, breathing rate while asleep, cardio fitness (VO2 max), and water and caffeine if another app logs them. It uses them only to tick your protocols, learn your normal, show your trends, suggest lighter days and judge your experiments. A finished experiment keeps only its verdict and the size of each change, never the daily numbers. The raw numbers stay on your phone: they&#x27;re never stored by Kitty Max, never synced to iCloud and never sent anywhere. Kitty Max writes only one thing to Health: your breathing and calm sessions, as mindful minutes. You can change access any time in the Health app.</p>
+<p>If you connect Apple Health, Kitty Max reads sleep (including when you fell asleep and woke, and sleep stages), steps and walking distance, workouts, exercise and stand time, active energy, time in daylight, mindful minutes, heart rate variability, resting and walking heart rate, breathing rate while asleep, sleeping wrist temperature and blood oxygen where your watch records them, cardio fitness (VO2 max), and water and caffeine if another app logs them. It uses them only to tick your protocols, learn your baseline, show your scores, vitals and trends, suggest lighter days and judge your experiments. A finished experiment keeps only its verdict and the size of each change, never the daily numbers. The raw numbers stay on your phone: they&#x27;re never stored by Kitty Max, never synced to iCloud and never sent anywhere. Kitty Max writes only one thing to Health: your breathing and calm sessions, as mindful minutes. You can change access any time in the Health app.</p>
 <h2>Morning log</h2>
 <p>If you log bed and wake times by hand, they&#x27;re stored with the rest of your data on your phone (and in your own iCloud if sync is on), like your journal.</p>
 <h2>Purchases</h2>
 <p>Plus and yarn are bought through the App Store. Apple handles payment; we only receive a confirmation that a purchase happened, never your payment details.</p>
 <h2>Reminders</h2>
 <p>Reminders are scheduled on your device. Nothing about them is sent anywhere.</p>
+<h2>Anonymous counts</h2>
+<p>To learn whether Kitty Max helps people keep going, each install adds 1 to a shared weekly tally the first time it reaches one of ten steps: installed, finished onboarding, ticked a first step, came back the next day, in week two or after a month, saw the Plus screen, started a free week, paid for Plus, or opened a share sheet. The tally is kept per app build and install week in Kitty Max&#x27;s public iCloud database. It never includes your name, an ID, your device, your Health data, journal, goals or anything you wrote, and we never see who added to it. Uploads happen about once a day at a random time. Turn it off in Settings under Anonymous counts.</p>
 <h2>Analytics and ads</h2>
 <p>Kitty Max has no ads, no tracking and no third-party analytics.</p>
 <h2>Deleting your data</h2>
 <p>Settings ▸ Your data lets you export everything or delete it. Deleting the app removes the data on your phone.</p>
 <h2>Contact</h2>
-<p>Questions about privacy: open an issue at github.com/gshorin-dev/kitty-max-legal, or write to the developer through the App Store listing.</p>
+<p>Questions about privacy, or anything else: email goldenhourlabs.support@gmail.com. Report a problem (in Help &amp; support) writes that email for you with your app version, iOS version, phone model, language, how many days you&#x27;ve had your cat, and whether Plus, iCloud sync and Apple Health are on. You see all of it before sending and can change or delete any of it. It never includes your name, journal, moods, plan or Health numbers, and nothing is sent unless you send the email.</p>
 <footer>Kitty Max offers wellness habits, not medical advice.</footer>
 </main></body></html>
